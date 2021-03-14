@@ -1,15 +1,16 @@
 import React from "react";
 import "../styles/components/loading.css";
 
-const Loading = () => {
+const Loading = (props) => {
   return (
-    <div class="loader">
-      <div class="lds-ellipsis">
+    <div className="loader">
+      <div className="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
       </div>
+      {props.err && <div className="error">{props.err}</div>}
     </div>
   );
 };

@@ -66,7 +66,7 @@ const Search = () => {
             autoFocus={true}
           />
         </form>
-        {err && <p>{err}</p>}
+        {err && <p className="error">{err}</p>}
       </div>
     </div>
   );

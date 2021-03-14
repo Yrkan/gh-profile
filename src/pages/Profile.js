@@ -34,7 +34,7 @@ const Profile = () => {
   return (
     <div>
       {loading ? (
-        <Loading></Loading>
+        <Loading err={err}></Loading>
       ) : (
         <div>
           {err && <p>{err}</p>}

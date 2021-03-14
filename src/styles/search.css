@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typo */
+.searchP {
+  font-size: 3rem;
+}
+
+.gradiantTxt {
+  background: -webkit-linear-gradient(45deg, #054be0, #8585ce);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gitIcon {
+  font-size: 7em;
+  color: #6565df;
+}
+
+/* Input */
+.searchInput {
+  height: 5rem;
+  width: 32rem;
+  padding: 0 1rem;
+  max-width: 75vw;
+  border: none;
+  font-size: 2rem;
+  background-color: #444;
+  color: #6565df;
+}
+
+.searchInput:focus {
+  outline: currentColor 0px none;
+  border: none;
+}

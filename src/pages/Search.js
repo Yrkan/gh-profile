@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import moment from "moment";
+import { VscGithubAlt } from "react-icons/vsc";
+
+import "../styles/search.css";
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -46,17 +49,25 @@ const Search = () => {
         setErr(err.message);
       });
   };
+
   return (
     <div>
-      {err && <p>{err}</p>}
-      <p>Let's lookup {username}</p>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </form>
+      <div className="wrapper">
+        <VscGithubAlt className="gitIcon" />
+        <p className="searchP">
+          Let's lookup {<span className="gradiantTxt">{username}</span>}
+        </p>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            className="searchInput"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            autoFocus={true}
+          />
+        </form>
+        {err && <p>{err}</p>}
+      </div>
     </div>
   );
 };

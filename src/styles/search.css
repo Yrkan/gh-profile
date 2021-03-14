@@ -3,11 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 /* Typo */
 .searchP {
-  font-size: 3rem;
+  font-size: 5em;
+  font-family: "Andika New Basic", sans-serif;
+  font-weight: bold;
 }
 
 .gradiantTxt {

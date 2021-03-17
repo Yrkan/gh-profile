@@ -2,6 +2,7 @@ import { VscCalendar, VscLocation } from "react-icons/vsc";
 import { MdWork } from "react-icons/md";
 import "../styles/components/userinfo.css";
 import moment from "moment";
+import CountUp from "react-countup";
 
 const UserInfo = (props) => {
   const {
@@ -50,15 +51,21 @@ const UserInfo = (props) => {
       </div>
       <div className="followersInfo">
         <div>
-          <p className="counter">{followers}</p>
+          <p className="counter">
+            <CountUp end={followers} duration={3} />
+          </p>
           <p>FOLLOWERS</p>
         </div>
         <div>
-          <p className="counter">{following}</p>
+          <p className="counter">
+            <CountUp end={following} duration={3} />
+          </p>
           <p>FOLLOWING</p>
         </div>
         <div>
-          <p className="counter">{public_repos}</p>
+          <p className="counter">
+            <CountUp end={public_repos} duration={3} />{" "}
+          </p>
           <p>REPOSITORIES</p>
         </div>
       </div>

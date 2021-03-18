@@ -68,6 +68,9 @@ const Profile = () => {
           .then((data) => {
             console.log(data);
             setRepos((prevState) => [...prevState, ...data]);
+          })
+          .catch((err) => {
+            console.error(err);
           });
       }
     }

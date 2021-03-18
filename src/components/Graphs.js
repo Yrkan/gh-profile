@@ -82,7 +82,7 @@ const Graph = (props) => {
     ],
   };
   return (
-    <div>
+    <div className="graphs">
       <div className="graph-wrapper">
         <Bar
           data={data_stars}

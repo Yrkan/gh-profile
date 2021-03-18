@@ -1,3 +1,18 @@
+.graphs {
+  display: flex;
+}
+
 .graph-wrapper {
   margin: 75px 0;
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .graphs {
+    flex-direction: column;
+  }
+  .graph-wrapper {
+    margin: 25px 0;
+    width: 100%;
+  }
 }

@@ -3,7 +3,6 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 
 const Graph = (props) => {
-  let x = props.repos
   Chart.defaults.global.defaultFontColor = "white";
   const data = {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -33,7 +32,6 @@ const Graph = (props) => {
   };
   return (
     <div>
-      <p>{x.length}</p>
       <Bar
         data={data}
         width={150}

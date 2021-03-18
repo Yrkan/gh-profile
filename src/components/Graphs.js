@@ -4,12 +4,21 @@ import { Bar } from "react-chartjs-2";
 
 const Graph = (props) => {
   Chart.defaults.global.defaultFontColor = "white";
+  const mostStarredCount = props.repos
+    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+    .map((e) => e.stargazers_count)
+    .slice(0, 5);
+  const mostStarredNames = props.repos
+    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+    .map((e) => e.name)
+    .slice(0, 5);
+
   const data = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: mostStarredNames,
     datasets: [
       {
-        label: "# of Votes",
-        data: [170, 19, 3, 5, 2, 3],
+        label: "# of Stars",
+        data: mostStarredCount,
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",

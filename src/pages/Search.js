@@ -21,7 +21,6 @@ const Search = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data.rate.remaining);
         if (data.rate.remaining > 1) {
           // We need at least one other request for the profile.
           err && setErr(""); // Clear errors if there's any

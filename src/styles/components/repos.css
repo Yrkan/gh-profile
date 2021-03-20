@@ -1,0 +1,37 @@
+.repos h2 {
+  margin-right: 15px;
+  font-size: 2rem;
+}
+
+.repos h2 span {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: rgb(131, 124, 124);
+}
+.repos .sort {
+  display: flex;
+  align-items: baseline;
+}
+
+select {
+  outline: none;
+  width: 90px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  height: 34px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+    no-repeat right #ddd;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  background-position-x: 70px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

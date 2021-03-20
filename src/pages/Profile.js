@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import Graph from "../components/Graphs";
 import Loading from "../components/Loading";
+import Repos from "../components/Repos";
 import UserInfo from "../components/UserInfo";
 
 const Profile = () => {
@@ -97,7 +98,10 @@ const Profile = () => {
           {err && <p>{err}</p>}
           <UserInfo data={data} />
           {canFetchRepos ? (
-            <Graph repos={repos} />
+            <Fragment>
+              <Graph repos={repos} />
+              <Repos repos={repos} />
+            </Fragment>
           ) : (
             <p className="error">Not enough API rate to fetch repositories</p>
           )}

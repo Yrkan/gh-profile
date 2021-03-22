@@ -3,9 +3,9 @@ import { RiGitRepositoryLine, RiStarLine } from "react-icons/ri";
 import { AiOutlineFork } from "react-icons/ai";
 import "../styles/components/card.css";
 
-const Card = ({ name, description, stars, forks }) => {
+const Card = ({ name, description, stars, forks, url }) => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => window.open(url, "_blank")}>
       <h3>
         <RiGitRepositoryLine className="repoicon" />
         {name}

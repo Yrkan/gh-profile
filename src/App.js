@@ -5,7 +5,7 @@ import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/">
         <Search />
